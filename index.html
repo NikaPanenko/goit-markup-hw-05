@@ -21,7 +21,7 @@
     <!-- Modern Normalize end -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body>
+  <body data-page>
     <!-- Header section -->
     <header class="header">
       <div class="header-container container">
@@ -68,8 +68,11 @@
       <!-- Hero section -->
       <section class="hero">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button class="hero-btn btn" type="button">Заказать услугу</button>
+        <button class="hero-btn btn" type="button" data-modal-open>
+          Заказать услугу
+        </button>
       </section>
+
       <!-- Advantages section -->
       <section class="advantages">
         <h2 class="visually-hidden">Наши преимущества</h2>
@@ -139,6 +142,9 @@
                 height="294"
                 class="about-img"
               />
+              <div class="about-overlay">
+                <p class="overlay-title">Десктопные приложения</p>
+              </div>
             </li>
             <li class="about-item card-set-item">
               <img
@@ -148,6 +154,9 @@
                 height="294"
                 class="about-img"
               />
+              <div class="about-overlay">
+                <p class="overlay-title">Мобильные приложения</p>
+              </div>
             </li>
             <li class="about-item card-set-item">
               <img
@@ -157,6 +166,9 @@
                 height="294"
                 class="about-img"
               />
+              <div class="about-overlay">
+                <p class="overlay-title">Дизайнерские решения</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -610,5 +622,18 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" data-modal-close>
+          <svg class="modal-btn-icon" width="30" height="30">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
